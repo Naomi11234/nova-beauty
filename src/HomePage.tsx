@@ -1,15 +1,11 @@
-import ProductCard from './ProductCard'
+import FeaturedItemsGrid from "./FeaturedItemsGrid";
+import HeroBanner from "./HeroBanner";
 
 export default function HomePage() {
   return (
-    <main dir="rtl">
-      <h1>NOVA Beauty</h1>
-      <p>ברוכה הבאה לאתר האיפור שלי</p>
-
-      <section>
-        <h2>המוצרים שלנו</h2>
-        <ProductCard />
-      </section>
+    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-12 px-5 py-8 sm:px-8 sm:py-12">
+      <HeroBanner />
+      <FeaturedItemsGrid />
     </main>
-  )
+  );
 }

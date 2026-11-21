@@ -1,11 +1,10 @@
-import HomePage from './HomePage'
-import Navbar from './Navbar'
+import AppLayout from "./AppLayout";
+import HomePage from "./HomePage";
 
 export default function App() {
   return (
-    <>
-      <Navbar />
+    <AppLayout>
       <HomePage />
-    </>
-  )
+    </AppLayout>
+  );
 }
