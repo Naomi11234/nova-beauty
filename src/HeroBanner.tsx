@@ -1,29 +1,4 @@
 import { Button } from "@/components/ui/button";
-
 export default function HeroBanner() {
-  return (
-    <section className="grid items-center gap-8 rounded-3xl bg-rose-100 px-6 py-10 sm:px-10 md:grid-cols-2">
-      <div className="space-y-5">
-        <h1 className="text-4xl font-bold text-rose-950 sm:text-5xl">
-          NOVA Beauty
-        </h1>
-        <p className="text-lg leading-relaxed text-rose-950">
-          גלי מוצרי איפור וגוונים שמתאימים למראה שלך.
-        </p>
-        <Button
-          type="button"
-          className="bg-rose-900 text-white hover:bg-rose-800"
-          onClick={() => document.getElementById("products")?.scrollIntoView()}
-        >
-          לכל המוצרים
-        </Button>
-      </div>
-
-      <img
-        src={`${import.meta.env.BASE_URL}33000183-001-3.webp`}
-        alt="שפתון ורוד מקולקציית האיפור"
-        className="h-56 w-full rounded-2xl bg-white object-contain p-4 sm:h-64"
-      />
-    </section>
-  );
+ return <section className="grid overflow-hidden rounded-[2rem] bg-[#682f40] text-[#fff5e8] md:grid-cols-2"><div className="flex flex-col items-start justify-center gap-6 p-8 sm:p-14"><p dir="ltr" className="text-xs tracking-[.3em] text-[#e5c2a7]">NOVA BEAUTY / COLLECTION 01</p><h1 className="font-serif text-5xl leading-tight sm:text-6xl">צבע. יצירה.<br/>השראה.</h1><p className="max-w-sm leading-relaxed">קולקציית איפור בגוונים שנבחרו בקפידה, לחוויית איפור יצירתית ואישית.</p><Button type="button" className="bg-[#f4e1ce] text-[#682f40] hover:bg-white" onClick={()=>document.getElementById("products")?.scrollIntoView({behavior:"smooth"})}>גלי את הקולקציה</Button></div><img src={import.meta.env.BASE_URL+"nova-hero.svg"} alt="איור קולקציית NOVA BEAUTY" className="h-full min-h-72 w-full object-cover"/></section>;
 }
