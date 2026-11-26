@@ -1,17 +1,4 @@
-export default function Navbar() {
-  return (
-    <nav aria-label="תפריט ראשי" className="border-b border-rose-100 bg-white">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8">
-        <a href="#home" className="text-xl font-bold text-rose-950">
-          NOVA Beauty
-        </a>
-
-        <div className="flex flex-wrap gap-5 text-sm font-medium text-slate-700">
-          <a href="#home" className="hover:text-rose-700">בית</a>
-          <a href="#products" className="hover:text-rose-700">מוצרים</a>
-          <a href="#about" className="hover:text-rose-700">אודות</a>
-        </div>
-      </div>
-    </nav>
-  );
+import { Heart } from "lucide-react";
+export default function Navbar({favoriteCount}:{favoriteCount:number}) {
+ return <nav aria-label="תפריט ראשי" className="sticky top-0 z-20 border-b border-[#e5d3c7] bg-[#fffaf5]"><div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 sm:px-8"><a href="#home" dir="ltr" className="font-serif text-2xl tracking-[.18em] text-[#672f40]">NOVA <span className="text-xs">BEAUTY</span></a><div className="flex flex-wrap gap-5 text-sm"><a href="#home">בית</a><a href="#products">מוצרים</a><a href="#about">אודות</a></div><div aria-live="polite" className="flex items-center gap-2 rounded-full bg-[#f0e2dc] px-4 py-2 text-[#672f40]"><Heart size={19}/><span>{favoriteCount}</span><span className="sr-only">מועדפים</span></div></div></nav>;
 }
