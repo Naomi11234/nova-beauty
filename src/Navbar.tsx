@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function Navbar({ favoriteCount }: { favoriteCount: number }) {
   return (
     <nav aria-label="תפריט ראשי" className="border-b border-rose-100 bg-white">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8">
@@ -10,6 +10,7 @@ export default function Navbar() {
           <a href="#home" className="hover:text-rose-700">בית</a>
           <a href="#products" className="hover:text-rose-700">מוצרים</a>
           <a href="#about" className="hover:text-rose-700">אודות</a>
+          <span className="text-rose-700" aria-label={`מועדפים: ${favoriteCount}`} aria-live="polite">♥ {favoriteCount}</span>
         </div>
       </div>
     </nav>
