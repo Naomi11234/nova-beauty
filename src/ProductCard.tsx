@@ -9,6 +9,8 @@ type ProductCardProps = {
   brand: string;
   shade: string;
   category?: string;
+  isFavorite: boolean;
+  onToggleFavorite: () => void;
 };
 
 export default function ProductCard({
@@ -19,9 +21,10 @@ export default function ProductCard({
   brand,
   shade,
   category = "איפור",
+  isFavorite,
+  onToggleFavorite,
 }: ProductCardProps) {
   const [showDetails, setShowDetails] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(false);
   const detailsId = useId();
 
   return (
@@ -53,7 +56,8 @@ export default function ProductCard({
               ? "w-full border-rose-700 bg-rose-700 text-white hover:bg-rose-800 hover:text-white"
               : "w-full"
           }
-          onClick={() => setIsFavorite((previous) => !previous)}
+          aria-pressed={isFavorite}
+          onClick={onToggleFavorite}
         >
           {isFavorite ? "הסר ממועדפים" : "הוסף למועדפים"}
         </Button>
